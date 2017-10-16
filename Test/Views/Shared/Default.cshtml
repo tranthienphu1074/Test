@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Style.css" rel="stylesheet " />
+    <link href="~/Content/ddlevelsmenu-topbar.css" rel="stylesheet" />
+    <link href="~/Content/ddlevelsmenu-base.css" rel="stylesheet" />
+    <link href="~/Content/ddlevelsmenu-sidebar.css" rel="stylesheet" />
+    <link href="~/Content/ddlevelsmenu-mobile.css" rel="stylesheet" />
+    <script src="~/Scripts/ddlevelsmenu.js"></script>
+    <script type="text/javascript">
+        ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="head"></div>
+        <div class="menu">
+            <div id="ddtopmenubar" class="mattblackmenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" rel="ddsubmenu1" class="">Hãng sản phẩm<img src="~/Content/ddlevelsmenu/ddlevelsfiles/arrow-down.gif" class="downarrowpointer" style="width: 11px; height: 7px;"></a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"class="">About</a></li>
+                </ul>
+            </div>
+            </div>
+            <a class="animateddrawer" id="ddtopmenubar-mobiletoggle" href="#" style="display: none;">
+                <span></span>
+            </a>
+
+            <script type="text/javascript">
+                ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+            </script>
+
+            <iframe class="ddiframeshim" src="about:blank" frameborder="0" style="left: 0px; top: 0px; width: 0px; height: 0px;"></iframe><iframe class="ddiframeshim" src="about:blank" frameborder="0" style="left: 0px; top: 86px; width: 0px; height: 0px;"></iframe><div class="ddsubmenustyle" style="z-index: 2000; left: 0px; top: -1000px; visibility: hidden; height: 150px; width: 180px; overflow: visible; opacity: 1;">
+                <ul id="ddsubmenu1" style="visibility: hidden; top: 0px; left: 0px;">
+                    <li><a href="#">ACER</a></li>
+                    <li><a href="#">ASUS</a></li>
+                    <li><a href="#">DELL</a></li>
+                    <li><a href="#">MAC</a></li>
+                    </ul>
+            </div>
+            <div class="content">
+                <div class="content-left">
+                    @RenderBody()
+                </div>
+                <div class="content-right"></div>
+            </div>
+            <div class="content-bottom"></div>
+            <div class="footer"></div>
+        </div>
+</body>
+</html>

@@ -26,5 +26,11 @@ namespace Test.Controllers
 
             return View();
         }
+
+        public ActionResult Product()
+        {
+            ViewBag.view = "Đây là trang sản phẩm";
+            return View();
+        }
     }
 }

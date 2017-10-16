@@ -53,6 +53,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -190,30 +192,103 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DanhMuc.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ddlevelsmenu-base.css" />
+    <Content Include="Content\ddlevelsmenu-mobile.css" />
+    <Content Include="Content\ddlevelsmenu-sidebar.css" />
+    <Content Include="Content\ddlevelsmenu-topbar.css" />
+    <Content Include="Content\ddlevelsmenu\changelog.txt" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\arrow-down.gif" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\arrow-right.gif" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\bulletlist.gif" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\ddlevelsmenu-base.css" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\ddlevelsmenu-mobile.css" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\ddlevelsmenu-sidebar.css" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\ddlevelsmenu-topbar.css" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\ddlevelsmenu.js" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\index.htm" />
+    <Content Include="Content\ddlevelsmenu\ddlevelsfiles\left.gif" />
+    <Content Include="Content\ddlevelsmenu\demo.htm" />
+    <Content Include="Content\ddlevelsmenu\demo2.htm" />
+    <Content Include="Content\Images\arrow-down.gif" />
+    <Content Include="Content\Images\arrow-right.gif" />
+    <Content Include="Content\Images\bg-content-bottom.jpg" />
+    <Content Include="Content\Images\bg-menu.jpg" />
+    <Content Include="Content\Images\bulletlist.gif" />
+    <Content Include="Content\Images\left.gif" />
+    <Content Include="Content\Images\Products\Acer A315-51-37B9 Core i3-7100U -8.999.000.png" />
+    <Content Include="Content\Images\Products\Acer AS A315-31-C8GB - 5.999.000.jpg" />
+    <Content Include="Content\Images\Products\Acer ES1-533-C5TS - 5.990.000.png" />
+    <Content Include="Content\Images\Products\Asus E200HA-FD0043TS - 4.990.000.jpg" />
+    <Content Include="Content\Images\Products\Asus E200HA-FD0081TS - 5.290.000.jpg" />
+    <Content Include="Content\Images\Products\Asus E402NA-GA034 - 5.790.000.jpg" />
+    <Content Include="Content\Images\Products\Dell Inspiron N3467 - 10.290.000.png" />
+    <Content Include="Content\Images\Products\Dell Inspiron N3567C -10.390.000.png" />
+    <Content Include="Content\Images\Products\Dell N3467 -10.890.000.jpg" />
+    <Content Include="Content\Images\Products\Macbook 12 256GB %282017%29 - 33.999.000.jpg" />
+    <Content Include="Content\Images\Products\Macbook Air 13 128GB MQD32SA A %282017%29 - 23.999.000.jpg" />
+    <Content Include="Content\Images\Products\Macbook Air 13 256GB MQD42SA A %282017%29 - 28.999.000.jpg" />
+    <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ddlevelsmenu.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -258,6 +333,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Shared\Default.cshtml" />
+    <Content Include="Views\Default\Default.cshtml" />
+    <Content Include="Views\Default\News.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +353,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
