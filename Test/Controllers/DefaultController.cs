@@ -13,7 +13,7 @@ namespace Test.Controllers
         public ActionResult Default()
         {
             string Chuoi = "";
-            var product = (from p in db.DanhMucs orderby p.ID ascending select p).Take(12).ToList();
+            var product = (from p in db.DanhMucs orderby p.ID ascending select p).Take(100).ToList();
             for(int i = 0; i < product.Count; i++)
             {
                  Chuoi += "<div class=\"item-pro-home\">";
@@ -21,7 +21,7 @@ namespace Test.Controllers
                  Chuoi += "<img src = \"" + product[i].Image + "\" />";
                  Chuoi += "</div>";
                  Chuoi += "<a href=\"#\">"+ product[i].TenSanPham +"</a>";
-                 Chuoi += "<p>Giá: "+ product[i].Giatien +"</p>";
+                 Chuoi += "<p>Giá: "+ product[i].GiaTien +"</p>";
                  Chuoi += "</div>";
             }
             ViewBag.View = Chuoi;

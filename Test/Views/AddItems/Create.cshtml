@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<h2>Màn hình thêm sản phẩm</h2>
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <td>Tên sản phẩm:</td>
+        <td>@Html.TextBox("txtTenSanPham")</td>
+    </tr>
+    <tr>
+        <td>Giá tiền:</td>
+        <td>@Html.TextBox("txtGiaTien")</td>
+    </tr>
+    <tr>
+        <td>Hãng:</td>
+        <td>@Html.TextBox("txtHang")</td>
+    </tr>
+    <tr>
+        <td>Ảnh:</td>
+        <td>@Html.TextBox("txtAnh")</td>
+    </tr>
+    <tr>
+        <td>Thông tin:</td>
+        <td>@Html.TextBox("txtThongTin")</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" name="Insert" value="Insert"/>@Html.ActionLink("         Quay lại trang chủ", "Default", "Default")</td>
+    </tr>
+</table>
+}
+

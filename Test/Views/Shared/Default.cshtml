@@ -21,10 +21,11 @@
         <div class="menu">
             <div id="ddtopmenubar" class="mattblackmenu">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li>@Html.ActionLink("Trang chủ", "Default", "Default")</li>
                     <li><a href="#" rel="ddsubmenu1" class="">Hãng sản phẩm<img src="~/Content/ddlevelsmenu/ddlevelsfiles/arrow-down.gif" class="downarrowpointer" style="width: 11px; height: 7px;"></a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#"class="">About</a></li>
+                    <li>@Html.ActionLink("Về chúng tôi", "About", "Home")</li>
+                    <li>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Create","Create","AddItems")</li>
                 </ul>
             </div>
             </div>

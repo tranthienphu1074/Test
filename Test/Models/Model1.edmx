@@ -5,20 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DefaultConnectionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="DanhMucs">
+        <EntityType Name="DanhMuc">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenSanPham" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Giatien" Type="float" Nullable="false" />
-          <Property Name="NhanHieu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="GiaTien" Type="float" Nullable="false" />
+          <Property Name="Hang" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Image" Type="varchar" MaxLength="150" Nullable="false" />
-          <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
         </EntityType>
         <EntityContainer Name="DefaultConnectionModelStoreContainer">
-          <EntitySet Name="DanhMucs" EntityType="Self.DanhMucs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanhMuc" EntityType="Self.DanhMuc" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -31,10 +30,9 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenSanPham" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Giatien" Type="Double" Nullable="false" />
-          <Property Name="NhanHieu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GiaTien" Type="Double" Nullable="false" />
+          <Property Name="Hang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="DefaultConnectionEntities" annotation:LazyLoadingEnabled="true">
@@ -48,13 +46,12 @@
         <EntityContainerMapping StorageEntityContainer="DefaultConnectionModelStoreContainer" CdmEntityContainer="DefaultConnectionEntities">
           <EntitySetMapping Name="DanhMucs">
             <EntityTypeMapping TypeName="DefaultConnectionModel.DanhMuc">
-              <MappingFragment StoreEntitySet="DanhMucs">
+              <MappingFragment StoreEntitySet="DanhMuc">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
-                <ScalarProperty Name="Giatien" ColumnName="Giatien" />
-                <ScalarProperty Name="NhanHieu" ColumnName="NhanHieu" />
+                <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+                <ScalarProperty Name="Hang" ColumnName="Hang" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>

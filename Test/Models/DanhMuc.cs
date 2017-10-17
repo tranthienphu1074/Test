@@ -16,10 +16,9 @@ namespace Test.Models
     {
         public int ID { get; set; }
         public string TenSanPham { get; set; }
-        public double Giatien { get; set; }
-        public string NhanHieu { get; set; }
+        public double GiaTien { get; set; }
+        public string Hang { get; set; }
         public string Image { get; set; }
-        public System.DateTime Date { get; set; }
         public string Description { get; set; }
     }
 }
