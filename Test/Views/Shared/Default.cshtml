@@ -25,34 +25,34 @@
                     <li><a href="#" rel="ddsubmenu1" class="">Hãng sản phẩm<img src="~/Content/ddlevelsmenu/ddlevelsfiles/arrow-down.gif" class="downarrowpointer" style="width: 11px; height: 7px;"></a></li>
                     <li>@Html.ActionLink("Về chúng tôi", "About", "Home")</li>
                     <li>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Create","Create","AddItems")</li>
+                    <li>@Html.ActionLink("Thêm", "Create", "AddItems")</li>
                 </ul>
             </div>
-            </div>
-            <a class="animateddrawer" id="ddtopmenubar-mobiletoggle" href="#" style="display: none;">
-                <span></span>
-            </a>
-
-            <script type="text/javascript">
-                ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-            </script>
-
-            <iframe class="ddiframeshim" src="about:blank" frameborder="0" style="left: 0px; top: 0px; width: 0px; height: 0px;"></iframe><iframe class="ddiframeshim" src="about:blank" frameborder="0" style="left: 0px; top: 86px; width: 0px; height: 0px;"></iframe><div class="ddsubmenustyle" style="z-index: 2000; left: 0px; top: -1000px; visibility: hidden; height: 150px; width: 180px; overflow: visible; opacity: 1;">
-                <ul id="ddsubmenu1" style="visibility: hidden; top: 0px; left: 0px;">
-                    <li><a href="#">ACER</a></li>
-                    <li><a href="#">ASUS</a></li>
-                    <li><a href="#">DELL</a></li>
-                    <li><a href="#">MAC</a></li>
-                    </ul>
-            </div>
-            <div class="content">
-                <div class="content-left">
-                    @RenderBody()
-                </div>
-                <div class="content-right"></div>
-            </div>
-            <div class="content-bottom"></div>
-            <div class="footer"></div>
         </div>
+        <a class="animateddrawer" id="ddtopmenubar-mobiletoggle" href="#" style="display: none;">
+            <span></span>
+        </a>
+
+        <script type="text/javascript">
+            ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+        </script>
+
+        <iframe class="ddiframeshim" src="about:blank" frameborder="0" style="left: 0px; top: 0px; width: 0px; height: 0px;"></iframe><iframe class="ddiframeshim" src="about:blank" frameborder="0" style="left: 0px; top: 86px; width: 0px; height: 0px;"></iframe><div class="ddsubmenustyle" style="z-index: 2000; left: 0px; top: -1000px; visibility: hidden; height: 150px; width: 180px; overflow: visible; opacity: 1;">
+            <ul id="ddsubmenu1" style="visibility: hidden; top: 0px; left: 0px;">
+                <li><a href="#">@Html.ActionLink("ACER","ACER","Default")</a></li>
+                <li><a href="#">@Html.ActionLink("ASUS", "ASUS", "Default")</a></li>
+                <li><a href="#">@Html.ActionLink("DELL", "DELL", "Default")</a></li>
+                <li><a href="#">@Html.ActionLink("MAC", "MAC", "Default")</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                @RenderBody()
+            </div>
+            <div class="content-right"></div>
+        </div>
+        <div class="content-bottom"></div>
+        <div class="footer"></div>
+    </div>
 </body>
 </html>

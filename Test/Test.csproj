@@ -340,6 +340,11 @@
     <Content Include="Views\Default\Default.cshtml" />
     <Content Include="Views\AddItems\Create.cshtml" />
     <Content Include="Views\AddItems\Index.cshtml" />
+    <Content Include="Views\AddItems\Edit.cshtml" />
+    <Content Include="Views\Default\ACER.cshtml" />
+    <Content Include="Views\Default\ASUS.cshtml" />
+    <Content Include="Views\Default\DELL.cshtml" />
+    <Content Include="Views\Default\MAC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
